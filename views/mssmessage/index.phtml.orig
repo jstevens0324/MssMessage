@@ -1,0 +1,20 @@
+<?php
+echo $this->dataTable(
+    'grid',
+    array(),
+    array(
+        'bStateSave'      => true,
+        'bJQueryUI'       => true,
+        'sPaginationType' => 'full_numbers',
+        
+        'aoColumns' => array(
+            array('sTitle' => 'Subject', 'mDataProp' => 'subject'),
+            array('sTitle' => 'Delivery', 'mDataProp' => 'contact_name'),
+            array('sTitle' => 'Type', 'mDataProp' => 'message_name'),
+            array('sTitle' => 'Queued', 'mDataProp' => 'queuedAt'),
+            array('sTitle' => 'Sent', 'mDataProp' => 'sentAt'),
+        ),
+        
+        'aaData' => $this->data
+    )
+);
